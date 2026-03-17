@@ -27,6 +27,8 @@ void main() {
     StringManipulation.countOccurenceInString("kailash");
     StringManipulation.firstNonRepeatingCharInString("kailashk");
     StringManipulation.anagramOrNot("kailash", "kailash");
+    StringManipulation.charFrequency("kailash");
+    StringManipulation.subString("Computer");
 
 
 }

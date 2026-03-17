@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class StringManipulation {
 
@@ -109,4 +110,24 @@ public class StringManipulation {
         }
 
     }
+
+    public static void charFrequency(String input){
+        char[] chars = input.toCharArray();
+        StringBuilder stringBuilder = new StringBuilder();
+        Map<Character, Integer> map = new TreeMap<>();
+        for (int i = 0; i<=input.length()-1;i++){
+            map.put(chars[i], map.getOrDefault(chars[i],0)+1);
+        }
+        System.out.println("Occurence" + map);
+    }
+
+    public static void subString(String input){
+        for(int i =0;i<=input.length();i++){
+            for(int j = i+1;j<=input.length();j++){
+                System.out.println("substring: " + input.substring(i,j));
+            }
+        }
+    }
+
+
 }

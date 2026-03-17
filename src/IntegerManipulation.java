@@ -58,13 +58,13 @@ public class IntegerManipulation {
         }
     }
 
-    public static void reverseInteger(int arr) {
+    public static void reverseInteger(int a) {
 
         int rev = 0;
-        while (arr != 0) {
-            int d = arr % 10;
-            rev = rev * 10 + d;
-            arr = arr / 10;
+        while (a != 0) {
+            int d = a % 10;
+            rev = a * 10 + d;
+            a = a / 10;
         }
         System.out.println(rev);
     }
