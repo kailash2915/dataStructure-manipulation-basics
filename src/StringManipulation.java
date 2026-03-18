@@ -5,7 +5,6 @@ import java.util.TreeMap;
 
 public class StringManipulation {
 
-
     public String reverse(String in) {
         if (in == null) {
             throw new IllegalArgumentException("No input found");
@@ -128,6 +127,5 @@ public class StringManipulation {
             }
         }
     }
-
 
 }

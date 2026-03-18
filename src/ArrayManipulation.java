@@ -10,6 +10,7 @@ public class ArrayManipulation {
     //6. Second-largest number in the array
     //7. Third-largest number in the array
     //8. Reverse an integer array
+    //9. Move zeroes to end of an array
 
     public int[] twoSum(int[] nums, int target) {
         int i = 2;
@@ -104,6 +105,18 @@ public class ArrayManipulation {
             list.add(arr[i]);
         }
         System.out.println("" + list);
+    }
+
+    public static void moveZeroesToEnd(int[] arr){
+        int index = 0;
+        for(int i:arr){
+            if(i!=0){
+                arr[index++]= arr[i];
+            }
+        }
+        while(index<arr.length){
+            arr[index++]=0;
+        }
     }
 
 

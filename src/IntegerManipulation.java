@@ -69,5 +69,4 @@ public class IntegerManipulation {
         System.out.println(rev);
     }
 
-
 }
