@@ -12,12 +12,14 @@ void main() {
     //Arrays
     ArrayManipulation.oddOrNot(List.of(5,3,2));
     int[] arr = {1,2,2,3};
-    ArrayManipulation.findDuplicate(arr);
+    ArrayManipulation.removeDuplicate(arr);
     int[] array = {1,2,3,3,16,18,30};
-    ArrayManipulation.maxAndMinnumberInArray(array);
+    int[] arr1 = {2, 2, 1, 1, 2, 2, 2};
+    ArrayManipulation.maxAndMinNumberInArray(array);
     ArrayManipulation.secondLargestInArray(array);
     ArrayManipulation.thirdLargestInArray(array);
     ArrayManipulation.reverseIntArray(array);
+    ArrayManipulation.findMajorityElementInAnArray(arr1);
 
     //Strings
     String a = "Jayshree";

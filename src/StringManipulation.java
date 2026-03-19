@@ -5,6 +5,15 @@ import java.util.TreeMap;
 
 public class StringManipulation {
 
+    //1. Reverse a string
+    //2. Vowel Finder
+    //3. Palindrome
+    //4. count occurrence in String
+    //5. First non-repeating character in a string
+    //6. Anagram or not
+    //7. Character frequency
+    //8. Substring
+
     public String reverse(String in) {
         if (in == null) {
             throw new IllegalArgumentException("No input found");

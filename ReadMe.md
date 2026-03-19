@@ -1,10 +1,10 @@
 **Array Questions**
 
-1. Find the maximum and minimum element in an array.
-2. Find the second largest element in an array.
-3. Reverse an array.
-4. Remove duplicates from an array.
-5. Find the missing number in an array from 1 to N.
+1. Find the maximum and minimum element in an array. - Y
+2. Find the second largest element in an array. - Y
+3. Reverse an array. - Y
+4. Remove duplicates from an array. - Y
+5. Find the missing number in an array from 1 to N. - Y
 6. Find all duplicate elements in an array.
 7. Move all zeros in an array to the end.
 8. Rotate an array to the right by K steps.
