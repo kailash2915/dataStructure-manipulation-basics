@@ -30,6 +30,7 @@ public class Practise {
         }
         System.out.println("second largest: " + secondLargest);
     }
+
     public static void reverseAnArray(int[] arr){
         List<Integer> list = new ArrayList<>();
         for(int i =arr.length-1;i>=0;i--){

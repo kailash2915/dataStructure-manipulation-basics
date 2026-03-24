@@ -95,7 +95,7 @@ public class StringManipulation {
 
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
             if (entry.getValue() >= 2) {
-                System.out.println("First repeating char: " + entry.getKey());
+                System.out.println("First non-repeating char: " + entry.getKey());
                 return;
             }
         }
@@ -133,6 +133,20 @@ public class StringManipulation {
         for(int i =0;i<=input.length();i++){
             for(int j = i+1;j<=input.length();j++){
                 System.out.println("substring: " + input.substring(i,j));
+            }
+        }
+    }
+
+    public static void firstRepeating(String input) {
+        char[] chars = input.toCharArray();
+        Map<Character, Integer> map = new LinkedHashMap<>();
+        for(int i =0;i<chars.length-1;i++){
+            map.put(chars[i], map.getOrDefault(chars[i],0)+1);
+            for(Map.Entry<Character, Integer> entry : map.entrySet()) {
+                if (entry.getValue() > 1) {
+                    System.out.println("First repeating char: " + entry.getKey());
+                    return;
+                }
             }
         }
     }

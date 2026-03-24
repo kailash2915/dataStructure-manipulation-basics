@@ -18,8 +18,16 @@ public class ArrayManipulation {
     //13. Find the missing number in an array from 1 to N.
 
     public int[] twoSum(int[] nums, int target) {
-        int i = 2;
-        return new int[]{i};
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int remainder = target - nums[i];
+            if (map.containsKey(remainder)) {
+                return new int[]{map.get(remainder), i};
+            }
+            map.put(nums[i], i);
+        }
+        return new int[0];
     }
 
     public static void oddOrNot(List<Integer> list) {
@@ -206,5 +214,22 @@ public class ArrayManipulation {
     public static void findMissingNumber(int[] arr) {
 
     }
+
+    public static int mostRepeating(int[] arr) {
+        Map<Integer, Integer> map = new HashMap<>();
+        int maxCount = 0;
+        int result = arr[0];
+
+        for (int num : arr) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+
+            if (map.get(num) > maxCount) {
+                maxCount = map.get(num);
+                result = num;
+            }
+        }
+        return result;
+    }
+
 
 }

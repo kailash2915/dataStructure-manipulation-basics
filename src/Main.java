@@ -2,7 +2,6 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
 
-
     //Integers
     IntegerManipulation.swapNumbers(1,2);
     IntegerManipulation.reverseInteger(123);
@@ -31,8 +30,24 @@ void main() {
     StringManipulation.anagramOrNot("kailash", "kailash");
     StringManipulation.charFrequency("kailash");
     StringManipulation.subString("Computer");
+    StringManipulation.firstRepeating("kailashh");
 
+    //Practise
     Practise.twoSum(array,19);
 
+    //Create transactions
+    BankTransaction bankTransaction1 = new BankTransaction("1345",890.23,"CREDIT","1254");
+    BankTransaction bankTransaction2 = new BankTransaction("25345",1000,"CREDIT","1354");
+    BankTransaction bankTransaction3 = new BankTransaction("23445",1089.23,"CREDIT","1454");
+
+    List<BankTransaction> bankTransactions = new ArrayList<>();
+    bankTransactions.add(bankTransaction1);
+    bankTransactions.add(bankTransaction2);
+    bankTransactions.add(bankTransaction3);
+
+    //Execute methods
+    BankTransaction.duplicateAmount(bankTransactions);
+    BankTransaction.totalBalancePerAccount(bankTransactions);
+    BankTransaction.totalBalancePerAccount(bankTransactions);
 
 }
