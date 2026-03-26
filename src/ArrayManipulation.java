@@ -231,5 +231,45 @@ public class ArrayManipulation {
         return result;
     }
 
+    public static void sortDescendingManual(int[] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        for (int n : arr) {
+            System.out.print(n + " ");
+        }
+    }
+
+    public static boolean isPalindrome(int[] arr) {
+        int[] reversed = new int[arr.length];
+
+        // reverse the array
+        for (int i = 0; i < arr.length; i++) {
+            reversed[i] = arr[arr.length - 1 - i];
+        }
+
+        // compare original and reversed
+        return Arrays.equals(arr, reversed);
+    }
+
+
+    public static <T> boolean isPalindrome2(List<T> list) {
+        // create a copy
+        List<T> reversed = new ArrayList<>(list);
+
+        // reverse the copy
+        Collections.reverse(reversed);
+
+        // compare original vs reversed
+        return list.equals(reversed);
+    }
+
 
 }

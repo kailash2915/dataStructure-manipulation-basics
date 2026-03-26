@@ -31,6 +31,7 @@ void main() {
     StringManipulation.charFrequency("kailash");
     StringManipulation.subString("Computer");
     StringManipulation.firstRepeating("kailashh");
+    StringManipulation.findCountOfAchar("kailash");
 
     //Practise
     Practise.twoSum(array,19);
@@ -49,5 +50,19 @@ void main() {
     BankTransaction.duplicateAmount(bankTransactions);
     BankTransaction.totalBalancePerAccount(bankTransactions);
     BankTransaction.totalBalancePerAccount(bankTransactions);
+
+
+    //API
+    String apiEndpoint = "https://jsonplaceholder.typicode.com/users/1";
+    try {
+        List<String> data = ApiDataProcessor.fetchDataFromApi(apiEndpoint);
+        System.out.println("Fetched Data: " + data);
+
+        Set<String> duplicates = ApiDataProcessor.findDuplicates(data);
+        System.out.println("Duplicate Elements: " + duplicates);
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
 
 }

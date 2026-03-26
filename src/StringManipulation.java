@@ -151,4 +151,16 @@ public class StringManipulation {
         }
     }
 
+    public static void findCountOfAchar(String input){
+        char[] chars = input.toCharArray();
+        int count = 0;
+        for(int i =0; i<chars.length-1;i++){
+        if(chars[i]=='a'){
+            count++;
+        }
+        }
+        System.out.println(count);
+    }
+
+
 }
