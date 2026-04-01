@@ -91,9 +91,64 @@ public class Practise {
         }
     }
 
+    public static void printDuplicate(int[] arr){
+        Map<Integer, Integer> map = new HashMap<>();
+        int count = 0;
+        for(int i=0;i<arr.length;i++){
+            map.put(arr[i],map.getOrDefault(arr[i],0)+1);
+        }
+        for(Map.Entry<Integer,Integer> mapEntry: map.entrySet()){
+            if(mapEntry.getValue()>1){
+                System.out.println(mapEntry.getKey());
+            }
+        }
+    }
 
+    public static void firstNonRepeatingCharacter(String input){
+        char[] arr = input.toCharArray();
+        Map<Character,Integer> map = new LinkedHashMap<>();
+        for(int i=0;i<arr.length;i++){
+            map.put(arr[i], map.getOrDefault(arr[i],0)+1);
+        }
+        for(Map.Entry<Character,Integer> mapEntry: map.entrySet()){
+            if(mapEntry.getValue()==1){
+                System.out.println(mapEntry.getKey());
+                return;
+            }
+        }
+    }
 
+    public static void reverseInteger(int input){
+       int rev=0;
+       while(input!=0){
+           int temp = input%10;
+           rev=rev*10+temp;
+           input = input/10;
+       }
+        System.out.println(rev);
+    }
 
+    public static void twoSums(int[] arr, int target){
+        for(int i=0;i<arr.length-1;i++){
+            for(int j =i+1;j<arr.length-1;j++){
+                if(arr[i]+arr[j]==target){
+                    System.out.println("indices are: "+ i+j + "numbers are: " + arr[i]+arr[j]);
+                }
+            }
+        }
+    }
 
+    public static void tumSum2(int[] arr, int target){
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for(int i=0;i<arr.length;i++){
+            int complement = target-arr[i];
+            if(map.containsKey(complement)){
+                System.out.println("Indices: " + map.get(complement) + ", " + i);
+                return;
+            }
+            map.put(arr[i],i);
+        }
+    }
 
     }
